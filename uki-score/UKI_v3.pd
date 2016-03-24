@@ -1,4 +1,4 @@
-#N canvas 946 275 754 299 10;
+#N canvas 942 275 754 299 10;
 #X obj 256 116 netsend;
 #X msg 254 59 disconnect;
 #X floatatom 257 140 5 0 0 0 - - -, f 5;
@@ -8,7 +8,7 @@
 -1 -1 0 1;
 #X msg 445 118 send s1:\$1;
 #X msg 275 91 connect 127.0.0.1 9000;
-#N canvas 48 697 485 278 gem 0;
+#N canvas 44 697 485 278 gem 0;
 #N canvas 1106 545 676 481 bloodcells 0;
 #X obj 32 46 gemhead;
 #X obj 32 72 t a a b;
@@ -251,8 +251,8 @@
 #X connect 24 0 9 0;
 #X restore 84 178 pd bloodcells;
 #X obj 247 71 world_light;
-#N canvas 661 229 869 807 players 0;
-#N canvas 1410 703 450 300 players-pool 0;
+#N canvas 655 229 918 501 players 0;
+#N canvas 1406 703 450 300 players-pool 0;
 #X obj 20 20 player 1 7;
 #X obj 20 20 player 2 7;
 #X obj 20 20 player 3 7;
@@ -260,45 +260,45 @@
 #X obj 20 20 player 5 7;
 #X obj 20 20 player 6 7;
 #X obj 20 20 player 7 7;
-#X restore 401 -238 pd players-pool;
-#X msg 376 -292 \; pd-players-pool clear;
-#X obj 329 -233 until 6;
-#X obj 546 -310 gemhead;
-#X obj 546 -216 pix_texture;
-#X obj 609 -197 s /player/circle/texid;
-#X obj -41 -208 gemhead;
-#X obj -41 -165 gemframebuffer;
-#X obj -41 39 s /player/framebuffer;
-#X obj -41 18 t b;
-#X obj 101 -186 gemhead;
-#X obj 106 -132 pix_texture;
-#X obj 104 -107 square 4;
-#X obj -41 -139 translateXYZ 0 0 -4;
-#X floatatom 62 -75 5 0 0 0 - - -, f 5;
-#X obj 102 -167 alpha;
-#X msg 31 -216 dimen 1000 1000 \, format RGBA;
-#X obj 329 -182 + 1;
-#X obj -41 -65 rotateXYZ -40 0 0;
-#X obj 144 -161 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
-0 1;
-#X obj 203 -277 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
-0 1;
-#X msg 286 -382 6;
-#X obj 329 -161 pack f f;
-#X obj -41 -187 alpha;
-#X floatatom 359 -336 5 0 0 0 - - -, f 5;
-#X obj 330 -381 r /game/players;
-#X msg 329 -141 \; pd-players-pool obj 20 20 player \$1 \$2;
-#X obj 329 -314 t f b f b f;
-#X obj 546 -260 pix_image ./media/circle_6.png;
-#X msg 600 -290 open ./media/circle_\$1.png;
-#X obj 546 -285 alpha;
-#X obj 577 -238 pix_coloralpha;
-#X floatatom 123 -77 5 0 0 0 - - -, f 5;
-#X obj -41 -100 translateXYZ 0 0 -1;
-#X obj -44 -22 scale 1;
-#X floatatom 29 -17 5 0 0 0 - - -, f 5;
-#X obj 329 -204 cyclone/counter;
+#X restore 468 185 pd players-pool;
+#X msg 443 131 \; pd-players-pool clear;
+#X obj 396 190 until 6;
+#X obj 613 113 gemhead;
+#X obj 613 207 pix_texture;
+#X obj 676 226 s /player/circle/texid;
+#X obj 26 215 gemhead;
+#X obj 26 258 gemframebuffer;
+#X obj 26 462 s /player/framebuffer;
+#X obj 26 441 t b;
+#X obj 168 237 gemhead;
+#X obj 173 291 pix_texture;
+#X obj 171 316 square 4;
+#X obj 26 284 translateXYZ 0 0 -4;
+#X floatatom 129 348 5 0 0 0 - - -, f 5;
+#X obj 169 256 alpha;
+#X msg 98 207 dimen 1000 1000 \, format RGBA;
+#X obj 396 241 + 1;
+#X obj 26 358 rotateXYZ -40 0 0;
+#X obj 211 262 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 270 146 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X msg 353 41 6;
+#X obj 396 262 pack f f;
+#X obj 26 236 alpha;
+#X floatatom 426 87 5 0 0 0 - - -, f 5;
+#X obj 397 42 r /game/players;
+#X msg 396 282 \; pd-players-pool obj 20 20 player \$1 \$2;
+#X obj 396 109 t f b f b f;
+#X obj 613 163 pix_image ./media/circle_6.png;
+#X msg 667 133 open ./media/circle_\$1.png;
+#X obj 613 138 alpha;
+#X obj 644 185 pix_coloralpha;
+#X floatatom 190 346 5 0 0 0 - - -, f 5;
+#X obj 26 323 translateXYZ 0 0 -1;
+#X obj 23 401 scale 1;
+#X floatatom 96 406 5 0 0 0 - - -, f 5;
+#X obj 396 219 cyclone/counter;
 #X connect 2 0 36 0;
 #X connect 3 0 30 0;
 #X connect 4 1 5 0;
@@ -339,10 +339,14 @@
 1;
 #X obj 246 40 gemhead;
 #X obj 84 74 gemwin;
+#X msg 91 36 destroy \, 0;
+#X msg 62 12 dimen 640 480 \, lighting 1 \, create \, 1;
 #X connect 3 0 0 0;
 #X connect 4 0 1 0;
+#X connect 6 0 5 0;
+#X connect 7 0 5 0;
 #X restore -31 84 pd gem;
-#N canvas 362 172 1320 864 score_system 0;
+#N canvas 446 172 1320 864 score_system 0;
 #X obj 111 -65 r sensors;
 #X obj 111 -21 t l l b;
 #X msg 111 -1 \$2;
@@ -463,7 +467,7 @@
 #X msg 111 242 \$3;
 #X obj 739 -28 s /game/players;
 #X obj 739 -69 hradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144
--1 -1 7;
+-1 -1 3;
 #X obj 244 -123 hradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144
 -1 -1 0;
 #X obj 244 -101 + 1;
@@ -581,7 +585,7 @@
 #X msg 445 -55 \$2;
 #X msg 475 -55 \$2;
 #X obj 546 -2 vradio 15 1 0 4 empty empty empty 0 -8 0 10 -262144 -1
--1 1;
+-1 0;
 #X obj 566 -2 vradio 15 1 0 4 empty empty empty 0 -8 0 10 -262144 -1
 -1 0;
 #X obj -38 267 r /game/start;
@@ -905,6 +909,7 @@ sensor value [0..1];
 #X connect 27 0 28 0;
 #X connect 28 0 9 0;
 #X restore 211 221 pd video_sends;
+#X obj 598 57 zexy;
 #X connect 0 0 2 0;
 #X connect 1 0 0 0;
 #X connect 3 0 0 0;
