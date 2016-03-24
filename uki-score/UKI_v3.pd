@@ -1,4 +1,4 @@
-#N canvas 42 523 652 498 10;
+#N canvas -31 675 1054 498 10;
 #N canvas 44 697 485 278 gem 0;
 #N canvas 1106 545 676 481 bloodcells 0;
 #X obj 32 46 gemhead;
@@ -694,7 +694,7 @@ sensor value [0..1];
 #X obj 113 526 == 4;
 #X obj 297 524 == 4;
 #X obj 477 519 == 4;
-#X obj 342 544 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 342 544 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 525 538 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
@@ -781,7 +781,7 @@ sensor value [0..1];
 #X obj 669 -167 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X floatatom 685 192 5 0 0 0 - - -, f 5;
-#X obj 165 549 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 165 549 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj -38 297 r /game/level_sync;
 #X obj -37 321 t b b;
@@ -795,9 +795,9 @@ sensor value [0..1];
 #X msg 445 -55 \$2;
 #X msg 475 -55 \$2;
 #X obj 546 -2 vradio 15 1 0 4 empty empty empty 0 -8 0 10 -262144 -1
--1 2;
-#X obj 566 -2 vradio 15 1 0 4 empty empty empty 0 -8 0 10 -262144 -1
 -1 1;
+#X obj 566 -2 vradio 15 1 0 4 empty empty empty 0 -8 0 10 -262144 -1
+-1 2;
 #X obj -38 267 r /game/start;
 #X obj 154 596 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
@@ -1080,3 +1080,31 @@ table;
 #X connect 42 0 36 1;
 #X connect 43 0 1 0;
 #X restore 29 268 pd UKI_game&score;
+#X obj 636 8 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1 1
+;
+#X obj 635 28 metro 100;
+#X obj 635 180 array;
+#X obj 635 50 random 1024;
+#X obj 692 146 array get test;
+#X obj 692 175 list split 1;
+#X obj 658 205 list prepend;
+#X obj 657 117 t f b;
+#X obj 658 227 array set test;
+#X obj 635 72 / 512;
+#X obj 635 94 - 1;
+#X obj 819 64 array define test 500;
+#X msg 837 144 \; test bounds 0 1 500 -1;
+#X msg 845 238 \; test bounds Xmin Ymin Xmax Ymax;
+#X msg 851 196 \; test bounds \$1 0 500 1024;
+#X floatatom 935 178 5 0 0 0 - - -, f 5;
+#X connect 8 0 9 0;
+#X connect 9 0 11 0;
+#X connect 11 0 15 0;
+#X connect 12 0 13 0;
+#X connect 13 1 14 1;
+#X connect 14 0 16 0;
+#X connect 15 0 14 0;
+#X connect 15 1 12 0;
+#X connect 17 0 18 0;
+#X connect 18 0 15 0;
+#X connect 23 0 22 0;
