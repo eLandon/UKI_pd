@@ -1,10 +1,10 @@
-#N canvas 13 601 578 324 10;
+#N canvas 7 601 578 324 10;
 #X obj 61 55 r UKI_ESP_\$1;
 #X text 102 13 \$1 : sensor/player number;
 #X obj 254 90 vsl 10 55 0 1024 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 448 1;
-#X obj 271 90 vsl 10 55 0 1024 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
+-1 -1 1999 1;
+#X obj 271 90 vsl 10 55 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 1959 1;
 #N canvas 567 152 1300 819 levels 0;
 #X obj 72 35 inlet;
 #X obj 72 191 moses 0.15;
@@ -135,11 +135,11 @@
 #X restore 61 224 pd levels;
 #X obj 125 195 list prepend \$1;
 #X obj 286 88 vradio 15 1 0 4 empty empty empty 0 -8 0 10 -262144 -1
--1 1;
+-1 2;
 #X obj 305 100 vradio 8 1 0 6 empty empty empty 0 -8 0 10 -262144 -1
--1 0;
+-1 2;
 #X obj 286 37 unpack f f;
-#N canvas 519 205 450 300 \$0-oscillo 0;
+#N canvas 517 205 450 300 \$0-oscillo 0;
 #X obj 85 30 inlet;
 #X obj 120 122 list split 1;
 #X obj 85 152 list prepend;
@@ -155,16 +155,16 @@
 #X restore 145 174 pd \$0-oscillo;
 #X obj 318 82 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#N canvas 440 169 425 256 \$1-oscillo 0;
+#N canvas 1308 307 425 257 \$1-oscillo 0;
 #N canvas 1 53 450 300 \$0-gop 0;
 #N canvas 1 53 450 250 (subpatch) 0;
-#X array \$1-sensor 2000 float 2;
-#X coords 1420.43 1024 2000 0 400 200 1 0 0;
+#X array \$1-sensor 10000 float 2;
+#X coords 0 1 10000 0 400 200 1 0 0;
 #X restore 4 15 graph;
-#X obj 6 218 hsl 395 15 0 1950 0 0 empty empty empty -2 -8 0 10 -228856
+#X obj 6 218 hsl 395 15 0 9990 0 0 empty empty empty -2 -8 0 10 -228856
 -1 -1 0 1;
 #X obj 3 238 pack 0 \$1;
-#X msg 3 265 \; \$2-sensor bounds \$1 1024 2000 0;
+#X msg 3 265 \; \$2-sensor bounds \$1 1 10000 0;
 #X connect 1 0 2 0;
 #X connect 2 0 3 0;
 #X coords 0 -1 1 1 410 240 2 0 0;
@@ -179,7 +179,7 @@
 ;
 #X obj 84 90 list-abs/list-mean;
 #X obj 142 117 vsl 10 50 0 1024 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 426 1;
+-1 -1 1777 1;
 #X obj 84 68 list-abs/last-x 10;
 #X connect 0 0 5 0;
 #X connect 3 0 4 0;
@@ -194,19 +194,19 @@
 #X obj 158 177 / 1024;
 #X obj 158 157 -;
 #X text 205 176 sensor_norm;
-#X obj 158 199 limit 0 1;
 #X obj 158 19 inlet;
 #X obj 158 221 outlet;
+#X obj 158 199 maxlib/limit 0 1;
 #X connect 0 0 2 0;
 #X connect 1 0 3 0;
 #X connect 2 0 4 1;
 #X connect 3 0 2 0;
 #X connect 3 1 2 1;
 #X connect 3 2 5 1;
-#X connect 4 0 7 0;
+#X connect 4 0 9 0;
 #X connect 5 0 4 0;
-#X connect 7 0 9 0;
-#X connect 8 0 5 0;
+#X connect 7 0 5 0;
+#X connect 9 0 8 0;
 #X restore 61 147 pd norm;
 #X obj 286 -5 r /player;
 #X obj 286 17 route \$1;
