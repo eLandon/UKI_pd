@@ -1,4 +1,4 @@
-#N canvas 33 601 543 381 10;
+#N canvas 29 601 543 381 10;
 #X obj 61 75 r UKI_ESP_\$1;
 #X text 102 13 \$1 : sensor/player number;
 #N canvas 1 53 450 300 mean 0;
@@ -6,20 +6,20 @@
 #X obj 84 168 outlet;
 #X text 44 12 ici bientôt un système incroyable pour gérer ces capteurs
 ;
-#X obj 84 68 list-abs/last-x 50;
 #X obj 84 90 list-abs/list-mean;
 #X obj 142 117 vsl 10 50 0 1024 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 666 1;
-#X connect 0 0 3 0;
+-1 -1 435 1;
+#X obj 84 68 list-abs/last-x 10;
+#X connect 0 0 5 0;
 #X connect 3 0 4 0;
-#X connect 4 0 5 0;
-#X connect 4 0 1 0;
+#X connect 3 0 1 0;
+#X connect 5 0 3 0;
 #X restore 61 105 pd mean;
 #X obj 262 84 vsl 10 55 0 1024 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 854 1;
+-1 -1 243 1;
 #X obj 279 84 vsl 10 55 0 1024 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 734 1;
-#N canvas 817 484 1300 819 levels 1;
+-1 -1 479 1;
+#N canvas 817 484 1300 819 levels 0;
 #X obj 289 17 inlet;
 #X obj 782 151 r /game/level/3;
 #X obj 782 174 unpack f f;
@@ -49,7 +49,7 @@
 #X obj 500 237 >= 200;
 #X obj 500 260 &&;
 #X obj 289 56 t f f f f;
-#X text 158 93;
+#X text 158 93 comment;
 #X text 161 340 si hors tous levels;
 #X text 950 256 ajout sublevels : si dans level \, si >;
 #X obj 843 347 -;
