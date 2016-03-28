@@ -31,6 +31,7 @@
 #X obj 96 125 unpack f f f;
 #X obj 73 546 color 1 0 0;
 #X obj 73 510 scale 0.15;
+#X obj 254 20 r /bloodcell-init;
 #X connect 0 0 1 0;
 #X connect 1 0 26 0;
 #X connect 3 0 25 0;
@@ -71,3 +72,4 @@
 #X connect 29 2 26 3;
 #X connect 30 0 2 0;
 #X connect 31 0 30 0;
+#X connect 32 0 6 0;
