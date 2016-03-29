@@ -1,4 +1,4 @@
-#N canvas 1 92 501 646 10;
+#N canvas 1 91 501 646 10;
 #X obj 73 24 r bloodcell-render;
 #X obj 73 51 separator;
 #X obj 73 576 model ./media/BloodCell_MODEL_0810.obj;
@@ -32,6 +32,7 @@
 #X obj 73 546 color 1 0 0;
 #X obj 73 510 scale 0.15;
 #X obj 254 20 r /bloodcell-init;
+#X obj 131 471 r /bloodcell/scale;
 #X connect 0 0 1 0;
 #X connect 1 0 26 0;
 #X connect 3 0 25 0;
@@ -73,3 +74,4 @@
 #X connect 30 0 2 0;
 #X connect 31 0 30 0;
 #X connect 32 0 6 0;
+#X connect 33 0 31 1;
