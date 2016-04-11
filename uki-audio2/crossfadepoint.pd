@@ -1,0 +1,45 @@
+#N canvas 0 75 1366 693 10;
+#X obj 310 9 r point;
+#X obj 437 108 r up;
+#X obj 367 520 hsl 128 15 0 90 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 12700 1;
+#X floatatom 367 549 5 0 0 0 - - -, f 5;
+#X msg 437 169 90;
+#X obj 367 472 line 1;
+#X obj 532 549 s score;
+#X obj 532 520 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 511 129 loadbang;
+#X obj 532 474 delay 100;
+#X msg 309 169 50;
+#X msg 367 433 \$1 3000;
+#X obj 367 601 outlet;
+#X obj 343 35 inlet;
+#X obj 310 106 spigot;
+#X floatatom 343 68 1 0 0 0 - - -, f 1;
+#X text 368 69 control: nonzero to pass messages \, zero to stop them
+;
+#X obj 405 46 -1;
+#X obj 175 155 spigot;
+#X floatatom 174 207 5 0 0 0 - - -, f 5;
+#X msg 176 107 50;
+#X floatatom 218 114 1 0 0 0 - - -, f 1;
+#X connect 0 0 14 0;
+#X connect 1 0 4 0;
+#X connect 2 0 3 0;
+#X connect 3 0 12 0;
+#X connect 4 0 11 0;
+#X connect 5 0 2 0;
+#X connect 7 0 6 0;
+#X connect 8 0 4 0;
+#X connect 9 0 7 0;
+#X connect 10 0 9 0;
+#X connect 10 0 11 0;
+#X connect 11 0 5 0;
+#X connect 13 0 17 0;
+#X connect 14 0 10 0;
+#X connect 15 0 14 1;
+#X connect 17 0 15 0;
+#X connect 18 0 19 0;
+#X connect 20 0 18 0;
+#X connect 21 0 18 1;
