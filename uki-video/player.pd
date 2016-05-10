@@ -1,4 +1,4 @@
-#N canvas 86 643 730 680 10;
+#N canvas 84 356 730 680 10;
 #X text 504 68 reçoit données capteur;
 #X text 504 87 gère affichage joueur;
 #X obj 140 0 r /player/framebuffer;
@@ -6,7 +6,7 @@
 #X msg 71 55 0;
 #X obj 71 35 loadbang;
 #X obj 140 115 spigot;
-#N canvas 1 52 802 447 tripleAnneau 1;
+#N canvas 1 52 802 447 tripleAnneau 0;
 #X obj 60 87 pix_texture;
 #X obj 134 63 r /player/circle/texid;
 #X obj 60 142 repeat 3;
@@ -35,7 +35,7 @@
 #X obj 403 240 != 2;
 #X obj 423 260 != 1;
 #X obj 93 350 + 0.4;
-#N canvas 1263 370 450 300 fade 0;
+#N canvas 1259 368 450 300 fade 0;
 #X obj 126 24 route 0 1;
 #X obj 93 123 line;
 #X msg 93 79 0;
@@ -48,7 +48,7 @@
 #X obj 35 64 bang;
 #X obj 143 149 line;
 #X obj 48 153 pack 1 0.85;
-#X msg 138 123 0.85;
+#X msg 138 123 1;
 #X msg 179 118 0.85 300;
 #X connect 0 0 8 0;
 #X connect 0 1 7 0;
@@ -68,7 +68,7 @@
 #X connect 13 0 10 0;
 #X restore 197 311 pd fade;
 #X msg 197 336 \$1 1 1 \$2;
-#N canvas 1218 663 450 300 fade 0;
+#N canvas 1214 661 450 300 fade 0;
 #X obj 126 24 route 0 1;
 #X obj 93 123 line;
 #X msg 93 79 0;
@@ -81,8 +81,8 @@
 #X obj 35 64 bang;
 #X obj 143 149 line;
 #X obj 48 153 pack 1 0.85;
+#X msg 138 123 1;
 #X msg 179 118 0.85 300;
-#X msg 138 123 0.85;
 #X connect 0 0 8 0;
 #X connect 0 1 7 0;
 #X connect 1 0 11 0;
@@ -91,16 +91,16 @@
 #X connect 4 0 9 0;
 #X connect 6 0 0 0;
 #X connect 7 0 3 0;
-#X connect 7 1 12 0;
+#X connect 7 1 13 0;
 #X connect 8 0 2 0;
-#X connect 8 1 13 0;
+#X connect 8 1 12 0;
 #X connect 9 0 11 0;
 #X connect 10 0 11 1;
 #X connect 11 0 5 0;
 #X connect 12 0 10 0;
 #X connect 13 0 10 0;
 #X restore 267 311 pd fade;
-#N canvas 1263 370 450 300 fade 1;
+#N canvas 1259 368 450 300 fade 0;
 #X obj 126 24 route 0 1;
 #X obj 93 123 line;
 #X msg 93 79 0;
@@ -113,7 +113,7 @@
 #X obj 35 64 bang;
 #X obj 143 149 line;
 #X obj 48 153 pack 1 0.85;
-#X msg 138 123 0.85;
+#X msg 138 123 1;
 #X msg 179 118 0.85 300;
 #X connect 0 0 8 0;
 #X connect 0 1 7 0;
