@@ -1,6 +1,6 @@
-#N canvas 87 445 549 496 10;
+#N canvas 85 444 549 502 10;
 #X obj 29 13 zexy;
-#N canvas 657 312 1135 592 UKI_sensors 0;
+#N canvas 655 311 1135 592 UKI_sensors 0;
 #X floatatom 262 134 3 0 0 0 - - -, f 3;
 #X floatatom 289 134 3 0 0 0 - - -, f 3;
 #X floatatom 316 134 3 0 0 0 - - -, f 3;
@@ -54,15 +54,15 @@
 -1;
 #X text 578 247 absolute minimum level;
 #X text 579 297 absolute maximum level;
-#X obj 533 144 ESP_sensors 6;
+#X obj 530 144 ESP_sensors 6;
 #X obj 337 306 loadbang;
-#X obj 440 44 ESP_sensors 1;
-#X obj 440 144 ESP_sensors 5;
-#X obj 719 44 ESP_sensors 4;
-#X obj 533 44 ESP_sensors 2;
-#X obj 626 44 ESP_sensors 3;
-#X obj 626 144 ESP_sensors 7;
-#X obj 719 144 ESP_sensors 8;
+#X obj 435 44 ESP_sensors 1;
+#X obj 435 144 ESP_sensors 5;
+#X obj 720 44 ESP_sensors 4;
+#X obj 530 44 ESP_sensors 2;
+#X obj 625 44 ESP_sensors 3;
+#X obj 625 144 ESP_sensors 7;
+#X obj 720 144 ESP_sensors 8;
 #X msg 431 329 \; set_level_min 0 \; set_level_1/2 0.25 \; set_level_2/3
 0.55 \; set_level_max 1024;
 #X connect 5 0 0 0;
@@ -110,7 +110,7 @@
 #X connect 37 0 38 0;
 #X connect 45 0 57 0;
 #X connect 49 0 57 0;
-#X coords 0 -1 1 1 380 300 1 430 20;
+#X coords 0 -1 1 1 390 300 1 430 20;
 #X restore 28 35 pd UKI_sensors;
 #N canvas 765 119 1006 707 UKI_game&score 0;
 #X obj 61 288 r /player;
