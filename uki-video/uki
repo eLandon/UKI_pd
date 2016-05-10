@@ -1522,7 +1522,7 @@
 /ev/buf/bloodcells/shift/z 0
 /ev/buf/bloodcells/scale/z 1
 /ev/buf/bloodcells/state 1
-/ev/buf/bloodcells/dimen/y 1024
+/ev/buf/bloodcells/dimen/y 4096
 /ev/buf/bloodcells/dimen/x 1024
 /ev/buf/bloodcells/type BYTE
 /ev/buf/bloodcells/format RGBA
@@ -1530,7 +1530,7 @@
 /ev/buf/bloodcells/shift/y 0
 /ev/buf/bloodcells/shift/x 0
 /ev/buf/bloodcells/scale/y 1
-/ev/buf/bloodcells/scale/x 1
+/ev/buf/bloodcells/scale/x 4
 /ev/buf/GAME/color 0 0 0 0
 /ev/buf/GAME/shift/z 0
 /ev/buf/GAME/scale/z 1
