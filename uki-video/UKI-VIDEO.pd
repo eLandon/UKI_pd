@@ -1,10 +1,10 @@
-#N canvas 8 834 548 202 10;
+#N canvas 166 791 548 202 10;
 #X declare -path . -path .. -path data -path ../data -path ev-in -path
 ../ev-in -path ev-main -path ../ev-main -path ev-pano -path ../ev-pano
 -path ev-pro -path ../ev-pro -path libs/gil -path ../libs/gil -path
 libs/kollabs -path ../libs/kollabs -path media -path ../media -path
 ev-glsl -path ../ev-glsl;
-#N canvas 638 143 703 774 main 0;
+#N canvas 634 141 703 774 main 0;
 #X obj 56 62 loadbang;
 #X obj 79 128 del 1000;
 #X obj 56 191 del 3000;
@@ -17,7 +17,7 @@ ev-glsl -path ../ev-glsl;
 #X msg 149 111 \; pd dsp 1;
 #X obj 207 376 ev_gemwin;
 #X obj 53 376 ev_storage;
-#N canvas 560 612 1347 403 OSC 0;
+#N canvas 558 611 1347 403 OSC 0;
 #X obj 24 27 import mrpeach;
 #X obj 45 62 udpreceive 8000;
 #X obj 109 248 print;
@@ -156,14 +156,14 @@ ev-glsl -path ../ev-glsl;
 #X text 254 472 MAPPING;
 #X text 254 488 players&events-buf;
 #X text 254 503 bloodcells-buf;
-#N canvas 232 187 597 849 mapping 0;
+#N canvas 228 185 597 849 mapping 0;
 #X obj 342 221 t a;
 #X obj 342 279 t a;
 #X obj 342 340 t a;
 #X obj 342 400 t a;
 #X obj 342 194 r /ev/buf/bloodcells/texture_id;
 #X obj 56 192 gemhead 50;
-#X obj 56 167 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 56 167 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 56 215 t a a a a a;
 #X obj 56 554 t a a a a;
@@ -527,7 +527,7 @@ et 8 affichage joueur;
 #X connect 10 0 7 0;
 #X restore 51 650 pd src_GAME;
 #X text 135 650 score system and game events;
-#N canvas 37 395 619 586 bloodcells 0;
+#N canvas 33 393 619 586 bloodcells 0;
 #X obj 7 13 cnv 15 300 130 empty empty FRAMEBUFFER 20 12 0 14 -262130
 -66577 0;
 #X obj 20 35 gemhead 20;
@@ -538,7 +538,7 @@ et 8 affichage joueur;
 1;
 #X obj 217 242 scaleXYZ 1 1 1;
 #X obj 20 55 ev_buf bloodcells;
-#N canvas 187 289 727 628 bloodcells 0;
+#N canvas 183 287 727 628 bloodcells 0;
 #X obj 21 203 gemhead;
 #X obj 138 212 r boidParam;
 #X obj 44 449 s bloodcell-render;
@@ -1184,7 +1184,7 @@ et 8 affichage joueur;
 #X floatatom 391 429 5 0 0 0 - - -, f 5;
 #X text 275 407 create bloodcell instances (CAREFUL !) \, then save
 the patch;
-#N canvas 57 52 1292 839 behaviour 0;
+#N canvas 55 52 1292 839 behaviour 0;
 #X text 14 18 PARAMETERS THAT DON'T CHANGE;
 #X text 634 49 PARAMETERS DEPENDING ON EVENTS/GAME MODES;
 #X obj 22 66 b;
@@ -1261,8 +1261,8 @@ the patch;
 #X obj 407 720 f;
 #X obj 408 671 t f f;
 #X msg 358 738 \; /bloodcells/speed 0.5 \$1;
-#X obj 407 647 / 2;
 #X obj 458 688 / 2;
+#X obj 407 647 / 2;
 #X connect 2 0 19 0;
 #X connect 2 0 57 0;
 #X connect 2 0 20 0;
@@ -1295,13 +1295,13 @@ the patch;
 #X connect 54 0 59 1;
 #X connect 54 0 65 0;
 #X connect 59 0 60 0;
-#X connect 59 0 69 0;
+#X connect 59 0 70 0;
 #X connect 62 0 66 0;
 #X connect 66 0 68 0;
 #X connect 67 0 62 0;
-#X connect 67 1 70 0;
-#X connect 69 0 67 0;
-#X connect 70 0 66 1;
+#X connect 67 1 69 0;
+#X connect 69 0 66 1;
+#X connect 70 0 67 0;
 #X restore 122 113 pd behaviour;
 #X obj 44 428 translateXYZ 0 0 0;
 #X obj 138 267 boids/boids3d 250 0;
@@ -1432,7 +1432,7 @@ system;
 #X obj 434 466 bng 15 250 50 0 /mapping/edit empty edit_mapping 17
 7 0 10 -262144 -1 -1;
 #X obj 434 487 tgl 15 0 empty empty background_color 17 7 0 10 -262144
--1 -1 1 1;
+-1 -1 0 1;
 #X msg 434 547 \; /ev/gemwin color 0 0 \$1 \$1;
 #X obj 434 507 tgl 15 0 empty empty mouseover 17 7 0 10 -262144 -1
 -1 0.1 0.1;
