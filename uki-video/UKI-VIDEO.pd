@@ -1,4 +1,4 @@
-#N canvas 166 791 548 202 10;
+#N canvas 647 829 548 202 10;
 #X declare -path . -path .. -path data -path ../data -path ev-in -path
 ../ev-in -path ev-main -path ../ev-main -path ev-pano -path ../ev-pano
 -path ev-pro -path ../ev-pro -path libs/gil -path ../libs/gil -path
@@ -163,7 +163,7 @@ ev-glsl -path ../ev-glsl;
 #X obj 342 400 t a;
 #X obj 342 194 r /ev/buf/bloodcells/texture_id;
 #X obj 56 192 gemhead 50;
-#X obj 56 167 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 56 167 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 56 215 t a a a a a;
 #X obj 56 554 t a a a a;
@@ -1435,7 +1435,7 @@ system;
 -1 -1 0 1;
 #X msg 434 547 \; /ev/gemwin color 0 0 \$1 \$1;
 #X obj 434 507 tgl 15 0 empty empty mouseover 17 7 0 10 -262144 -1
--1 0.1 0.1;
+-1 0 0.1;
 #X msg 434 597 \; /ev/mouse/select_radius \$1;
 #N canvas 1 52 648 471 README 0;
 #X text 67 71 systeme video :;
