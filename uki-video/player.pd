@@ -1,4 +1,4 @@
-#N canvas 84 356 730 680 10;
+#N canvas 80 359 730 680 10;
 #X text 504 68 reçoit données capteur;
 #X text 504 87 gère affichage joueur;
 #X obj 140 0 r /player/framebuffer;
@@ -205,7 +205,7 @@
 #X connect 45 0 8 0;
 #X connect 46 0 35 0;
 #X restore 256 544 pd tripleAnneau;
-#N canvas 401 136 662 840 player#+sensor 0;
+#N canvas 399 138 662 827 player#+sensor 1;
 #X obj 200 318 loadbang;
 #X obj 200 343 f \$1;
 #X obj 73 28 color 1 1 1 1;
@@ -236,7 +236,7 @@ base;
 #X msg 265 714 1;
 #X msg 313 599 1;
 #X msg 268 590 0;
-#X obj -57 522 r /player_sensor;
+#X obj -57 452 r /player_sensor;
 #X floatatom 35 624 5 0 0 0 - - -, f 5;
 #X floatatom -56 584 5 0 0 0 - - -, f 5;
 #X obj -57 544 route \$1;
@@ -258,6 +258,9 @@ base;
 #X obj 73 248 rotateXYZ 0 0 0;
 #X obj 93 203 * -1;
 #X text 136 200 compensate global buffer rotation;
+#X obj -4 475 loadbang;
+#X obj -4 497 f \$1;
+#X obj -4 519 + 1;
 #X connect 0 0 13 0;
 #X connect 0 0 1 0;
 #X connect 1 0 45 0;
@@ -305,10 +308,13 @@ base;
 #X connect 47 0 46 1;
 #X connect 48 0 46 0;
 #X connect 49 0 46 1;
+#X connect 51 0 52 0;
+#X connect 52 0 53 0;
+#X connect 53 0 32 1;
 #X restore 133 575 pd player#+sensor;
 #X obj 140 256 translateXYZ 0 0 0;
 #X obj 141 465 rotateXYZ;
-#X obj 339 121 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 339 121 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 179 86 > \$1;
 #X obj 179 44 v /game/players;
